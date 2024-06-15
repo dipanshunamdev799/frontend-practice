@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* Content won't overflow due to box-sizing */
+}
+
+body{
+    background-color: grey;
+}
+
+.main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.apply-box{
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    padding: 20px;
+    box-shadow: 4px 3px 5px rgba(1,1,1,0.1);
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+.title{
+    display: flex;
+    align-items: baseline
+}
+.form-container{
+    margin-top: 3vh;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+.form-control{
+    display:flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 550;
+}
+
+input, select, textarea{
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid grey;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline-color: black;
+    border: none;
+}
+
+.button-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 15px;    
+}
+
+button{
+    background: orangered;
+    border: transparent solid 2px;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+}
+
+button:hover{
+    background-color: grey;
+    border: orangered solid 2px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+#address{
+    
+    width: 100%;
+}
+.address{
+    grid-column: 1 /  3;
+}
+
+@media (max-width:600px){
+    .form-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
